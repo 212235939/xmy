@@ -1,23 +1,75 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/home/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  // 首页
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    children:[
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import( '../views/About.vue')
+      }
+    ]
   },
+  // 课程
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/Course',
+    name: 'Course',
+    component: () => import( '../views/course/Course'),
+    children:[
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import( '../views/About.vue')
+      }
+    ]
+  },
+  // 约课记录
+  {
+    path: '/Lesson',
+    name: 'Lesson',
+    component: () => import( '../views/lesson/Lesson'),
+    children:[
+      {
+        path: '/Practice',
+        name: 'Practice',
+        component: () => import( '../views/practice/Practice')
+      }
+    ]
+  },
+  // 练习
+  {
+    path: '/Practice',
+    name: 'Practice',
+    component: () => import( '../views/practice/Practice'),
+    children:[
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import( '../views/About.vue')
+      }
+    ]
+  },
+  // 我的
+  {
+    path: '/My',
+    name: 'My',
+    component: () => import( '../views/my/My'),
+    children:[
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import( '../views/About.vue')
+      }
+    ]
+  },
 ]
 
 const router = new VueRouter({
