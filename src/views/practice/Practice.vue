@@ -1,15 +1,10 @@
 <template>
-  <div>
-      练习
-  </div>
+  <div>练习</div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>
