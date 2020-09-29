@@ -1,4 +1,11 @@
 <template>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  <div>
+    
+=======
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   <div class="body">
     <!-- User-logo -->
     <div class="user-logo">
@@ -31,11 +38,27 @@
         </van-form>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+>>>>>>> e59cca5a3e514fee17f9942dba10d6ff0d06edb8
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   </div>
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+</script>
+
+<style>
+
+</style>
+=======
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   data() {
     return {
       username: "",
@@ -100,4 +123,9 @@ export default {
 .active {
   border-bottom: #fd6d1c;
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> e59cca5a3e514fee17f9942dba10d6ff0d06edb8
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd

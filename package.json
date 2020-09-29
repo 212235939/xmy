@@ -25,9 +25,13 @@
     "> 1%",
     "last 2 versions",
     "not dead"
+<<<<<<< HEAD
   ],
   "description": "<<<<<<< HEAD # dome",
   "main": "babel.config.js",
   "author": "",
   "license": "ISC"
+=======
+  ]
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
 }

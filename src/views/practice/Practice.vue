@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="body">
     <!-- 导航 -->
     <van-nav-bar title="练习" />
@@ -195,4 +196,14 @@ export default {
   width: 25%;
   height: 70%;
 }
+=======
+  <div>练习</div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
 </style>
