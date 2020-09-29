@@ -32,6 +32,7 @@
       </van-dropdown-menu>
      
     <div></div>
+    </div>
   </div>
 </template>
 

@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
 
     <div>
     <!-- 轮播图 -->
@@ -34,25 +30,14 @@
         <mteacher></mteacher>
       </div>
 
-<<<<<<< HEAD
-    </div>
-    </div>
-
-
-=======
 
     </div>
 
-=======
-  <div>
-    首页
-<<<<<<< HEAD
-=======
-  
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
->>>>>>> 72d0a02ff5a4c94096a168f9444749a9ff02e5cb
+
+ 
+
   </div>
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
+
 </template>
 
 <script>
@@ -62,32 +47,14 @@ import course from "@/components/home/course.vue";
 import star from "@/components/home/star.vue";
 import mteacher from "@/components/home/mteacher.vue";
 export default {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
   components: {
     swiper,
     teacher,
     course,
     star,
     mteacher
-<<<<<<< HEAD
-=======
-  }
-};
-</script>
 
-<style scoped>
-=======
-<<<<<<< HEAD
-
-}
-</script>
-
-<style>
-=======
+  },
   data(){
     return{
       list:[]
@@ -97,14 +64,12 @@ export default {
     this.$axios.post("http://xx.com/api/public/img").then(res=>{
       console.log(res.data)
     })
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
   }
-};
+}
 </script>
 
 <style scoped>
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
->>>>>>> 72d0a02ff5a4c94096a168f9444749a9ff02e5cb
+
 
 .iconshuben,.icontushu,.iconxinxi{
   font-size: 25px;

@@ -1,27 +1,20 @@
 <template>
   <div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
       约课记录
-=======
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
+
     <!-- 头部导航 -->
     <div class="div_header">
       <div class="iconfont icon-zuojiantou"></div>
       <div class="div_header_title">约课记录</div>
     </div>
 
-<<<<<<< HEAD
- 
-=======
     <!-- 固定定位的留言标题div
     <div class="div_fixed" @mousedown="start" @mouseup="stop" @mousemove="move">
       <div class="Size iconfont icon-duanxin"></div>
     </div> -->
     <!-- 定位的拖拽事件子组件 -->
     <Xuan></Xuan>
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
 
     <!-- 可选区域的内容 -->
     <van-tabs
@@ -53,42 +46,11 @@
         </div>
       </van-tab>
     </van-tabs>
-<<<<<<< HEAD
-=======
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
+
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default {
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
-
-export default {
- 
-  data() {
-    return {
-      active: 0,
-    };
-  },
-  methods: {
-    Immediately() {
-      // console.log('1111');
-      this.$router.push("/onetutoring");
-    },
-  },
-  mounted() {},
-};
-</script>
-
-<<<<<<< HEAD
-=======
-<style>
-
-=======
 import "../../toolkit/rem.js";
 import Xuan from "../../components/Lesson/Xuan";
 
@@ -111,7 +73,6 @@ export default {
 };
 </script>
 
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
 <style scoped>
 .div_header {
   width: 59%;
@@ -147,8 +108,5 @@ export default {
   color: white;
   border: 1px solid rgb(255, 123, 0);
 }
-<<<<<<< HEAD
-=======
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
->>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
+
 </style>

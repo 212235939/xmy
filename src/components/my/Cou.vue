@@ -5,7 +5,6 @@
   left-arrow
   @click-left="onlist()"
 />
-
   <van-tabs v-model="active">
   <van-tab title="全部订单">
 
@@ -42,7 +41,7 @@
     </div>
   </van-tab>
 </van-tabs>
-
+  
 
   </div>
 </template>
