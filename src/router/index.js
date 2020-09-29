@@ -10,11 +10,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    children:[
+    children: [
       {
         path: '/about',
         name: 'About',
-        component: () => import( '../views/About.vue')
+        component: () => import('../views/About.vue')
       }
     ]
   },
@@ -22,12 +22,12 @@ const routes = [
   {
     path: '/Course',
     name: 'Course',
-    component: () => import( '../views/course/Course'),
-    children:[
+    component: () => import('../views/course/Course'),
+    children: [
       {
         path: '/about',
         name: 'About',
-        component: () => import( '../views/About.vue')
+        component: () => import('../views/About.vue')
       }
     ]
   },
@@ -35,12 +35,12 @@ const routes = [
   {
     path: '/Lesson',
     name: 'Lesson',
-    component: () => import( '../views/lesson/Lesson'),
-    children:[
+    component: () => import('../views/lesson/Lesson'),
+    children: [
       {
         path: '/Practice',
         name: 'Practice',
-        component: () => import( '../views/practice/Practice')
+        component: () => import('../views/practice/Practice')
       }
     ]
   },
@@ -48,12 +48,12 @@ const routes = [
   {
     path: '/Practice',
     name: 'Practice',
-    component: () => import( '../views/practice/Practice'),
-    children:[
+    component: () => import('../views/practice/Practice'),
+    children: [
       {
         path: '/about',
         name: 'About',
-        component: () => import( '../views/About.vue')
+        component: () => import('../views/About.vue')
       }
     ]
   },
@@ -61,15 +61,21 @@ const routes = [
   {
     path: '/My',
     name: 'My',
-    component: () => import( '../views/my/My'),
-    children:[
+    component: () => import('../views/my/My'),
+    children: [
       {
         path: '/about',
         name: 'About',
-        component: () => import( '../views/About.vue')
+        component: () => import('../views/About.vue')
       }
     ]
   },
+  //一对一辅导
+  {
+    path: '/onetutoring',
+    name: 'OneTutoring',
+    component: () => import('../views/lesson/OneTutoring.vue')
+  }
 ]
 
 const router = new VueRouter({
