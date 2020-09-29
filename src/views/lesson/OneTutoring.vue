@@ -160,7 +160,7 @@
         </div>
         <div class="div_body_box4"><button>预约</button></div>
       </div>
-    </div>
+    </div> 
   </div>
 </template>
 
