@@ -1,4 +1,8 @@
 <template>
+<<<<<<< HEAD
+  <div>
+    
+=======
   <div >
 
 
@@ -105,11 +109,20 @@
           </li>
         </ul>
 
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   </div>
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
+
+}
+</script>
+
+<style>
+
+=======
   data(){
     return{
         show:false,
@@ -368,4 +381,5 @@ p{
     padding: 0px 0.35rem;
     box-sizing: border-box;
 }
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
 </style>

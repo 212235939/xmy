@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
 
     <router-view />
     <div class="boxs" v-show="this.$route.meta.showtab">
@@ -7,6 +8,79 @@
 
    
 
+=======
+<<<<<<< HEAD
+    <router-view />
+    <div class="showtab" v-show="this.$route.meta.showtab">
+      <van-tabbar v-model="active" route active-color="#FF7F16">
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
+    <router-view />
+
+    <van-tabbar v-model="active" route active-color="#FF7F16">
+>>>>>>> 72d0a02ff5a4c94096a168f9444749a9ff02e5cb
+      <van-tabbar-item name="1" to="/">
+        <div class="biwqfoqwo">
+          <span class="dqwdwqdwqwq iconfont iconren"></span>
+          <span>首页</span>
+        </div>
+      </van-tabbar-item>
+      <van-tabbar-item name="2" to="/Course">
+        <div class="biwqfoqwo">
+          <span class="dqwdwqdwqwq iconfont iconrenzheng"></span>
+          <span>课程</span>
+        </div>
+      </van-tabbar-item>
+      <van-tabbar-item name="3" to="/Lesson">
+        <div class="biwqfoqwo">
+          <span class="dqwdwqdwqwq iconfont iconshuben"></span>
+          <span>约课记录</span>
+        </div>
+      </van-tabbar-item>
+      <van-tabbar-item name="4" to="/Practice">
+        <div class="biwqfoqwo">
+          <span class="dqwdwqdwqwq iconfont iconboshimao"></span>
+          <span>练习</span>
+        </div>
+      </van-tabbar-item>
+      <van-tabbar-item name="5" to="/My">
+        <div class="biwqfoqwo">
+          <span class="dqwdwqdwqwq iconfont iconwode"></span>
+          <span>我的</span>
+        </div>
+      </van-tabbar-item>
+    </van-tabbar>
+<<<<<<< HEAD
+    </div>
+=======
+<<<<<<< HEAD
+=======
+=======
+  
+    <router-view/>
+    <div class="boxs"></div>
+   <van-tabbar v-model="active" route active-color="#FF7F16">
+    <van-tabbar-item name="1" to="/" >
+    <div class="biwqfoqwo">
+      <span class="dqwdwqdwqwq iconfont iconren"></span>
+      <span>首页</span>
+    </div>
+    </van-tabbar-item>
+    <van-tabbar-item name="2" to="/Course" >
+    <div class="biwqfoqwo">
+      <span class="dqwdwqdwqwq iconfont iconrenzheng"></span>
+      <span>课程</span>
+    </div>
+    </van-tabbar-item>
+    <van-tabbar-item name="3" to="/Lesson" >
+    <div class="biwqfoqwo">
+      <span class="dqwdwqdwqwq iconfont iconshuben"></span>
+      <span>约课记录</span>
+    </div>
+>>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
     
 
       <van-tabbar-item name="1" to="/">
@@ -51,6 +125,9 @@
   </div>
 
 
+>>>>>>> 3686c1cea00437c9008d8628f83223c7c12c8d8d
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
+>>>>>>> 72d0a02ff5a4c94096a168f9444749a9ff02e5cb
   </div>
 
 </template>
@@ -59,10 +136,66 @@
 export default {
   data() {
     return {
+<<<<<<< HEAD
 
       active: "1"
+=======
+<<<<<<< HEAD
+      active: "1"
+    };
+  }
+};
+</script>
+
+<style >
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0.27rem;
+}
+.biwqfoqwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* width: 1rem; */
+  height: 0.8rem;
+  align-items: center;
+}
+.dqwdwqdwqwq {
+  font-size: 0.46rem;
+=======
+      active: "1",
+>>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
     };
   },
+<<<<<<< HEAD
+ 
+=======
+<<<<<<< HEAD
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
+};
+</script>
+
+<style>
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0.27rem;
+}
+.biwqfoqwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* width: 1rem; */
+  height: 0.8rem;
+  align-items: center;
+}
+.dqwdwqdwqwq {
+  font-size: 0.46rem;
+<<<<<<< HEAD
+=======
+=======
   methods:{
 
      move(event) {
@@ -148,6 +281,7 @@ export default {
  }
 .dqwdwqdwqwq{
 font-size: 0.46rem;
+>>>>>>> 3686c1cea00437c9008d8628f83223c7c12c8d8d
 }
 #quanjujj{
    position: fixed;
@@ -163,5 +297,7 @@ font-size: 0.46rem;
   background:rgb(91, 91, 255);
  
 
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
+>>>>>>> 72d0a02ff5a4c94096a168f9444749a9ff02e5cb
 }
 </style>

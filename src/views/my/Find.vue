@@ -1,5 +1,6 @@
 <template>
   <div>
+<<<<<<< HEAD
       <van-nav-bar
   title="找回密码"
   left-text="返回"
@@ -20,11 +21,15 @@
   </div>
 
         <div class="deng">确定</div>
+=======
+      找回
+>>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
   </div>
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
   data(){
     return{
      
@@ -87,4 +92,12 @@ input{
   background: orangered;
   margin: auto;
 }
+=======
+
+}
+</script>
+
+<style>
+
+>>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
 </style>

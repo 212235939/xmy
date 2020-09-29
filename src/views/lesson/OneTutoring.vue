@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="div_header_nav">
+<<<<<<< HEAD
       <div class="Size iconfont icon-zuojiantou" @click="back">《</div>
+=======
+      <div class="Size iconfont icon-zuojiantou" @click="back"></div>
+>>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
       <div style="color: red">一对一辅导</div>
       <div class="Size iconfont icon-icon-search"></div>
     </div>

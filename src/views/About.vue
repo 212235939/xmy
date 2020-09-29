@@ -1,7 +1,17 @@
 <template>
+<<<<<<< HEAD
 
   <div>
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  <div>
+    
+=======
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
+>>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
   <div class="body">
     <!-- User-logo -->
     <div class="user-logo">
@@ -34,13 +44,33 @@
         </van-form>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+>>>>>>> e59cca5a3e514fee17f9942dba10d6ff0d06edb8
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   </div>
   </div>
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
  data() {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+</script>
+
+<style>
+
+</style>
+=======
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
+  data() {
+>>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
     return {
       username: "",
       password: "",
@@ -114,5 +144,14 @@ export default {
 .active {
   border-bottom: #fd6d1c;
 }
+<<<<<<< HEAD
 </style>
 
+=======
+<<<<<<< HEAD
+</style>
+=======
+</style>
+>>>>>>> e59cca5a3e514fee17f9942dba10d6ff0d06edb8
+>>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
+>>>>>>> ace817ad0630028158a956f287cf3b56d773be9c
