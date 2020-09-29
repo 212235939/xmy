@@ -2,7 +2,7 @@
   <div id="app">
   
     <router-view/>
-
+    <div class="boxs"></div>
    <van-tabbar v-model="active" route active-color="#FF7F16">
     <van-tabbar-item name="1" to="/" >
     <div class="biwqfoqwo">
@@ -37,6 +37,12 @@
     </van-tabbar-item>
   </van-tabbar>
 
+
+  <div id="quanjujj" @touchmove.prevent="move">
+    <span class="qwwqwq iconfont iconletter"></span>
+  </div>
+
+
   </div>
 </template>
 
@@ -47,6 +53,33 @@ export default {
       active: '1',
     };
   },
+  methods:{
+
+     move(event) {
+      var ss = document.querySelector("#quanjujj")
+      var x = event.targetTouches[0].clientX;
+      var y = event.targetTouches[0].clientY;
+      var clientW = document.documentElement.clientWidth;
+      var clientH = document.documentElement.clientHeight;
+      ss.style.left = x - 25 + "px";
+      ss.style.top = y - 25 + "px";
+      // 检测碰撞
+      if (x < 25) {
+        x = 25;
+      } else if (x > clientW - 25) {
+        x = clientW - 25;
+      }
+
+      if (y < 25) {
+        y = 25;
+      } else if (y > clientH - 25) {
+        y = clientH - 25;
+      }
+      ss.style.left = x - 25 + "px";
+      ss.style.top = y - 25 + "px";
+    },
+
+  }
 }
 </script>
 
@@ -55,7 +88,16 @@ export default {
    margin: 0px;
    padding: 0px;
    font-size: 0.27rem;
-   
+   list-style: none;
+ }
+
+ .qwwqwq{
+   color: #fff;
+   font-size: 0.66rem;
+ }
+ .boxs{
+   width: 100%;
+   height: 10vh;
  }
  .biwqfoqwo{
    display: flex;
@@ -67,5 +109,19 @@ export default {
  }
 .dqwdwqdwqwq{
 font-size: 0.46rem;
+}
+#quanjujj{
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 10px;
+  width: 1.5rem;
+  z-index: 999999999999999999999;
+  height: 1.5rem;
+  border-radius: 50%;
+  background:rgb(91, 91, 255);
+ 
+
 }
 </style>

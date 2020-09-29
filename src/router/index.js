@@ -11,11 +11,7 @@ const routes = [
     name: 'Home',
     component: Home,
     children:[
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import( '../views/About.vue')
-      }
+      
     ]
   },
   // 课程
@@ -24,11 +20,11 @@ const routes = [
     name: 'Course',
     component: () => import( '../views/course/Course'),
     children:[
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import( '../views/About.vue')
-      }
+      // {
+      //   path: '/about',
+      //   name: 'About',
+      //   component: () => import( '../views/About.vue')
+      // }
     ]
   },
   // 约课记录
@@ -37,11 +33,11 @@ const routes = [
     name: 'Lesson',
     component: () => import( '../views/lesson/Lesson'),
     children:[
-      {
-        path: '/Practice',
-        name: 'Practice',
-        component: () => import( '../views/practice/Practice')
-      }
+      // {
+      //   path: '/Practice',
+      //   name: 'Practice',
+      //   component: () => import( '../views/practice/Practice')
+      // }
     ]
   },
   // 练习
@@ -50,11 +46,11 @@ const routes = [
     name: 'Practice',
     component: () => import( '../views/practice/Practice'),
     children:[
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import( '../views/About.vue')
-      }
+      // {
+      //   path: '/about',
+      //   name: 'About',
+      //   component: () => import( '../views/About.vue')
+      // }
     ]
   },
   // 我的
@@ -63,13 +59,18 @@ const routes = [
     name: 'My',
     component: () => import( '../views/my/My'),
     children:[
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import( '../views/About.vue')
-      }
+      // {
+      //   path: '/about',
+      //   name: 'About',
+      //   component: () => import( '../views/About.vue')
+      // }
     ]
   },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import( '../views/About.vue')
+  }
 ]
 
 const router = new VueRouter({
