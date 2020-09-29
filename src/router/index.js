@@ -70,6 +70,12 @@ const routes = [
       }
     ]
   },
+  //搜索
+  {
+    path: '/search',
+    name: 'Search',
+    component: () => import( '../views/search/Search.vue')
+  },
 ]
 
 const router = new VueRouter({

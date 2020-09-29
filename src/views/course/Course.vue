@@ -1,12 +1,15 @@
 <template>
   <div>
-      课程
+      <TesekeTop></TesekeTop>
   </div>
 </template>
 
 <script>
+import TesekeTop from '../../components/TesekeTop'
 export default {
-
+  components:{
+     TesekeTop
+  },
 }
 </script>
 
