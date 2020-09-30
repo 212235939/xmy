@@ -1,6 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
     <div class="body">
       <!-- User-logo -->
       <div class="user-logo">
@@ -24,44 +23,6 @@
         </div>
       </div>
     </div>
-=======
-
-  <div>
-  <div class="body">
-    <!-- User-logo -->
-    <div class="user-logo">
-      <img src="https://msmk2019.oss-cn-shanghai.aliyuncs.com/uploads/image/2019pILfAg7Avr1567732916.png" alt="" />
-    </div>
-    <div class="login">
-      <!-- 表单 -->
-      <div class="from">
-        <van-form @click="name">
-          <van-field
-            v-model="username"
-            placeholder="请输入用户名"
-            class="active"
-          />
-          <van-field
-            v-model="password"
-            type="password"
-            placeholder="请输入密码"
-          />
-          <!-- 验证 -->
-          <div class="proving">
-            <span @click="add('/find')">找回密码</span>
-            <span>注册/验证码登录</span>
-          </div>
-          <div style="margin: 16px">
-            <van-button round block @click="submit" class="btn"
-              >登录</van-button
-            >
-          </div>
-        </van-form>
-      </div>
-    </div>
-  </div>
-  </div>
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
   </div>
 </template>
 
@@ -80,7 +41,6 @@ export default {
     name() {},
     submit() {
       // console.log("submit", values);
-<<<<<<< HEAD
     }
   }
 };
@@ -91,12 +51,6 @@ export default {
 
 
 
-=======
-    },
-  },
-}
-</script>
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
 <style scoped>
 .body {
   width: 100%;
@@ -146,12 +100,5 @@ export default {
 .active {
   border-bottom: #fd6d1c;
 }
-<<<<<<< HEAD
 </style>
 
-=======
-
-</style>
-
-
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a

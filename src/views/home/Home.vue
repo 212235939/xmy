@@ -1,11 +1,5 @@
 <template>
-<<<<<<< HEAD
   <div>
-=======
-
-
-    <div>
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
     <!-- 轮播图 -->
     <div class="swipers">
       <swiper></swiper>
@@ -37,13 +31,6 @@
         <star @click="star"></star>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-
-
- 
-
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
   </div>
 
 </template>
@@ -61,15 +48,6 @@ export default {
     course,
     star,
     mteacher
-<<<<<<< HEAD
-=======
-
-  },
-  data(){
-    return{
-      list:[]
-    }
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
   },
   methods: {
     goone() {
@@ -101,15 +79,9 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 .iconshuben,
 .icontushu,
 .iconxinxi {
-=======
-
-
-.iconshuben,.icontushu,.iconxinxi{
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
   font-size: 25px;
 }
 .threee {

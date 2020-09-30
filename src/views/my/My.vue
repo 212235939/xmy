@@ -1,19 +1,5 @@
 <template>
-<<<<<<< HEAD
   <div >
-=======
-  <div>
-    
-
-<van-overlay :show="show" @click="show = false">
-    <div class="block" >
-      <img class="block11" src="https://msmk2019.oss-cn-shanghai.aliyuncs.com/uploads/image/2020zXdvqyxz1n1601360479.png" alt="">
-    </div>
-</van-overlay>
-
-
-
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
     <div class="add">
       <div class="box_top"> </div>
       <div class="box_bottom">

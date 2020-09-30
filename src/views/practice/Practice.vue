@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-=======
-
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
   <div class="body">
     <!-- 导航 -->
     <van-nav-bar title="练习" />
@@ -199,8 +195,4 @@ export default {
   width: 25%;
   height: 70%;
 }
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
