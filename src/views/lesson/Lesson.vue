@@ -4,14 +4,7 @@
     <div class="div_header">
       <div class="iconfont icon-zuojiantou"></div>
       <div class="div_header_title">约课记录</div>
-    </div>
-
-    <!-- 固定定位的留言标题div
-    <div class="div_fixed" @mousedown="start" @mouseup="stop" @mousemove="move">
-      <div class="Size iconfont icon-duanxin"></div>
-    </div> -->
-    <!-- 定位的拖拽事件子组件 -->
-    <Xuan></Xuan>
+    </div> 
 
     <!-- 可选区域的内容 -->
     <van-tabs
@@ -33,7 +26,7 @@
         <div class="div_tab1">
           <img src="../../images/为空显示.png" class="div_tab_img1" />
           <div class="div_tab_title">还没有上课记录哦</div>
-          <div><button class="div_tab_btn">立即约课</button></div>
+          <div><button class="div_tab_btn" @click="Immediately">立即约课</button></div>
         </div>
       </van-tab>
       <van-tab title="已取消">
@@ -48,12 +41,9 @@
 
 <script>
 import "../../toolkit/rem.js";
-import Xuan from "../../components/Lesson/Xuan";
 
 export default {
-  components: {
-    Xuan,
-  },
+ 
   data() {
     return {
       active: 0,
