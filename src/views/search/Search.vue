@@ -79,9 +79,7 @@ export default {
       localStorage.history = JSON.stringify(this.history);
     },
     onFan(){
-       this.$router.push({
-        path:'/course'
-      })
+       this.$router.go(-1)
     }
   },
 };

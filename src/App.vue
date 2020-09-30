@@ -169,7 +169,6 @@ body {
 }
 .dqwdwqdwqwq {
   font-size: 0.46rem;
-
 }
 
 

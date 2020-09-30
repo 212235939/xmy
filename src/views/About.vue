@@ -41,7 +41,7 @@ export default {
  data() {
     return {
       username: "",
-      password: "",
+      password: ""
     };
   },
   methods: {
@@ -51,9 +51,9 @@ export default {
     name() {},
     submit() {
       // console.log("submit", values);
-    },
-  },
-}
+    }
+  }
+};
 </script>
 
 
@@ -97,7 +97,7 @@ export default {
   font-size: 0.2rem;
   display: flex;
   justify-content: space-between;
-  color:#999999;
+  color: #999999;
 }
 /* 提交按钮 */
 .btn {
@@ -109,5 +109,8 @@ export default {
 .active {
   border-bottom: #fd6d1c;
 }
-
 </style>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 43c108d70072ae81891edcc2941c2a994a8e69f6

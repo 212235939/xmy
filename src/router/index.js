@@ -10,32 +10,24 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-
-    meta:{
-      showtab:true
+    meta: {
+      showtab: true
     },
-    children :[{
-        path: '/about',
+    children: [
+      {
+        path: '/chome',
         name: 'About',
-        component: () => import('../views/About.vue')
-      }
-    ]
+        component: () => import('../views/home/Home.vue')
+      },
+    ],
   },
   {
-    path: '/Course',
-    name: 'Course',
-    component: () => import( '../views/course/Course'),
-    meta:{
-      showtab:true
-    },
-    children:[
-      // {
-      //   path: '/about',
-      //   name: 'About',
-      //   component: () => import( '../views/About.vue')
-      // }
-    ]
-
+    path: '/oneoneone',
+    component: () => import("../views/lesson/OneTutoring.vue")
+  },
+  {
+    path: '/datedate',
+    component: () => import("../views/lesson/data.vue")
   },
 
   // 课程
@@ -45,45 +37,29 @@ const routes = [
 
     component: () => import('../views/course/Course'),
     children: [
-
-    ]
-
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import('../views/About.vue')
+      }
+    ],
+    meta: {
+      showtab: true
+    }
   },
   // 约课记录
   {
     path: '/Lesson',
     name: 'Lesson',
     component: () => import('../views/lesson/Lesson'),
-
-    meta:{
-      showtab:true
+    meta: {
+      showtab: true
     },
-    children: [
-      {
-        path: '/Practice',
-        name: 'Practice',
-        component: () => import('../views/practice/Practice')
-      }
-    ]
-
   },
   // 练习
   {
     path: '/Practice',
     name: 'Practice',
-
-    component: () => import( '../views/practice/Practice'),
-    meta:{
-      showtab:true
-    },
-    children:[
-      // {
-      //   path: '/about',
-      //   name: 'About',
-      //   component: () => import( '../views/About.vue')
-      // }
-    ],
-
     component: () => import('../views/practice/Practice.vue'),
     meta: {
       showtab: true
@@ -114,29 +90,85 @@ const routes = [
   {
     path: '/ques-cllect',
     name: 'ques-cllect',
-    component: () => import('../views/practice/ques-cllect.vue')
+    component: () => import('../views/practice/Attention.vue'),
 
   },
   // 我的
   {
     path: '/My',
     name: 'My',
-    component: () => import('../views/my/My'),
-
-    meta:{
-      showtab:true
+    component: () => import('../views/my/My.vue'),
+    meta: {
+      showtab: true
     },
-    children: [
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import('../views/About.vue')
-      }
-    ]
+  },
+  //课程详情
+  {
+    path: '/details',
+    name: 'Details',
+    component: () => import( '../views/courseDetails/Details.vue')
   },
 
-  // },
+  // 找回密码
+  {
+    path: '/find',
+    name: 'Find',
+    component: () => import('../views/my/Find')
+  },
 
+
+
+
+    {
+        path: '/Coupon',
+        name: 'Coupon',
+        component: () => import('../components/my/Coupon'),
+        meta: {
+          showtab: false
+        },
+      },
+      {
+        path: '/UserCard',
+        name: 'UserCard',
+        component: () => import('../components/my/UserCard'),
+        meta: {
+          showtab: false
+        },
+      },
+
+
+
+
+    
+
+
+
+  //我的里面的小路由
+  // ====================================================================
+  {
+    path: '/collect',
+    name: 'Collect',
+    component: () => import('../components/my/Collect'),
+    meta: {
+      showtab: false
+    },
+  },
+  {
+    path: '/Sum',
+    name: 'Sum',
+    component: () => import('../components/my/Sum'),
+    meta: {
+      showtab: false
+    },
+  },
+  {
+    path: '/attention',
+    name: 'Attention',
+    component: () => import('../components/my/Attention'),
+    meta: {
+      showtab: false
+    },
+  },
 
   //搜索
   {
@@ -144,21 +176,6 @@ const routes = [
     name: 'Search',
     component: () => import('../views/search/Search.vue')
   },
-
-  //课程详情
-  {
-    path: '/details',
-    name: 'Details',
-    component: () => import( '../views/courseDetails/Details.vue')
-  },
-  
-  {
-    path: '/courses',
-    name: 'Courses',
-    component: () => import( '../views/courseDetails/Courses.vue'),
-    
-  },
-
 
   //一对一辅导
   {
@@ -174,9 +191,11 @@ const routes = [
   },
   // 找回密码
   {
-    path:'/forget-pass',
-    name:"forget-pass",
-    component:()=>import("../views/my/Forget-pass.vue")
+    path: '/forget-pass',
+    name: "forget-pass",
+    component: () => import("../views/my/Forget-pass.vue"),
+
+    component: () => import('../views/lesson/OneTutoring.vue')
   },
   // 注册
   {
@@ -184,7 +203,18 @@ const routes = [
     name: 'sms-login',
     component: () => import('../views/my/Sms-login.vue')
   },
-
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/About.vue'),
+    meta: {
+      showtab: false
+    }
+  },
+  {
+    path: '/cou',
+    component: () => import("../components/my/Cou.vue")
+  }
 
 ]
 

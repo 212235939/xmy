@@ -6,13 +6,6 @@
       <div class="div_header_title">约课记录</div>
     </div>
 
-    <!-- 固定定位的留言标题div
-    <div class="div_fixed" @mousedown="start" @mouseup="stop" @mousemove="move">
-      <div class="Size iconfont icon-duanxin"></div>
-    </div> -->
-    <!-- 定位的拖拽事件子组件 -->
-    <Xuan></Xuan>
-
     <!-- 可选区域的内容 -->
     <van-tabs
       v-model="active"
@@ -47,13 +40,9 @@
 </template>
 
 <script>
-import "../../toolkit/rem.js";
-import Xuan from "../../components/Lesson/Xuan";
 
 export default {
-  components: {
-    Xuan,
-  },
+ 
   data() {
     return {
       active: 0,
