@@ -160,7 +160,7 @@
         </div>
         <div class="div_body_box4"><button>预约</button></div>
       </div>
-    </div> 
+    </div>
   </div>
 </template>
 
@@ -194,12 +194,10 @@ export default {
 .div_header_nav {
   width: 99%;
   height: 1rem;
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.4rem;
-  /* color:gainsboro; */
 }
 .Size {
   font-size: 0.5rem;
@@ -216,7 +214,6 @@ export default {
 .div_body_box2 {
   width: 30%;
   height: 100%;
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -230,33 +227,29 @@ export default {
 .div_body_box3 {
   width: 40%;
   height: 100%;
-  /* background-color: yellow; */
 }
 .div_body_box4 {
   width: 30%;
   height: 100%;
-  /* background-color: yellowgreen; */
-  /* text-align: center; */
   display: flex;
   align-items: center;
 }
 .div_body_box4 button {
   width: 1.3rem;
   height: 0.7rem;
-  border-radius: 30%;
+  border-radius: 45%;
   background-color: gainsboro;
   border: 1px solid gainsboro;
   color: red;
 }
 .div_body_hidden {
   width: 100%;
-  height: 25rem;
-  background-color: rgb(238, 233, 211);
+  height: 24.5rem;
+  background-color: #f0f2f5;
 }
 .div_body_box3_div1 {
   width: 100%;
   height: 60%;
-  /* background-color: violet; */
   font-size: 0.34rem;
   display: flex;
   justify-content: space-between;
@@ -266,7 +259,6 @@ export default {
 .div_body_box3_div2 {
   width: 100%;
   height: 40%;
-  /* background-color: salmon; */
   color: gray;
 }
 </style>
