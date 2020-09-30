@@ -11,8 +11,11 @@ Vue.prototype.$axios = axios
 import Vant from 'vant';
 import 'vant/lib/index.css';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
 Vue.use(Vant);
 
 

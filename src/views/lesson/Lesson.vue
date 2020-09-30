@@ -1,5 +1,11 @@
 <template>
   <div>
+<<<<<<< HEAD
+=======
+
+      约课记录
+
+>>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
     <!-- 头部导航 -->
     <div class="div_header">
       <div class="iconfont icon-zuojiantou"></div>
@@ -38,10 +44,19 @@
         </div>
       </van-tab>
     </van-tabs>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
+=======
+import "../../toolkit/rem.js";
+import Xuan from "../../components/Lesson/Xuan";
+>>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
 
 export default {
  
@@ -95,4 +110,8 @@ export default {
   color: white;
   border: 1px solid rgb(255, 123, 0);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 581c8dcd467d62f9cc5f5a5997b2490ae3c7c11a
 </style>
