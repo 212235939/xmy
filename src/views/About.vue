@@ -4,7 +4,7 @@
   <div class="body">
     <!-- User-logo -->
     <div class="user-logo">
-      <img src="/User-logo.png" alt="" />
+      <img src="https://msmk2019.oss-cn-shanghai.aliyuncs.com/uploads/image/2019pILfAg7Avr1567732916.png" alt="" />
     </div>
     <div class="login">
       <!-- 表单 -->
@@ -22,7 +22,7 @@
           />
           <!-- 验证 -->
           <div class="proving">
-            <span>找回密码</span>
+            <span @click="add('/find')">找回密码</span>
             <span>注册/验证码登录</span>
           </div>
           <div style="margin: 16px">
@@ -45,12 +45,15 @@ export default {
     };
   },
   methods: {
+    // add(path){
+    //   this.$router.push(path)
+    // },
     name() {},
     submit() {
       // console.log("submit", values);
     },
   },
-};
+}
 </script>
 
 
@@ -106,4 +109,5 @@ export default {
 .active {
   border-bottom: #fd6d1c;
 }
+
 </style>

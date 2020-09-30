@@ -1,6 +1,7 @@
 <template>
   <div>
       <TesekeTop @onDetail="onDetail"></TesekeTop>
+
   </div>
 </template>
 
