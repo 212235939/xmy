@@ -1,5 +1,8 @@
 <template>
   <div>
+  <div>
+    
+  
     <!-- 轮播图 -->
     <div class="swipers">
       <swiper></swiper>
@@ -31,6 +34,7 @@
         <star @click="star"></star>
       </div>
     </div>
+  </div>
   </div>
 
 </template>
@@ -73,9 +77,9 @@ export default {
     },
     star(obj){
       console.log(obj)
-    }
   }
-};
+  }
+}
 </script>
 
 <style scoped>

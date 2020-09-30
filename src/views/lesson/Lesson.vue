@@ -6,8 +6,6 @@
       <div class="div_header_title">约课记录</div>
     </div>
 
- 
-
     <!-- 可选区域的内容 -->
     <van-tabs
       v-model="active"

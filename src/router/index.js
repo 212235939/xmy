@@ -34,6 +34,7 @@ const routes = [
   {
     path: '/Course',
     name: 'Course',
+
     component: () => import('../views/course/Course'),
     children: [
       {
@@ -44,34 +45,16 @@ const routes = [
     ],
     meta: {
       showtab: true
-    },
-    children: [
-      // {
-      //   path: '/about',
-      //   name: 'About',
-      //   component: () => import( '../views/About.vue')
-      // }
-    ]
+    }
   },
   // 约课记录
   {
     path: '/Lesson',
     name: 'Lesson',
     component: () => import('../views/lesson/Lesson'),
-    children: [
-
-    ],
     meta: {
       showtab: true
     },
-    component: () => import('../views/lesson/Lesson'),
-    children: [
-      // {
-      //   path: '/Practice',
-      //   name: 'Practice',
-      //   component: () => import( '../views/practice/Practice')
-      // }
-    ]
   },
   // 练习
   {
@@ -83,41 +66,44 @@ const routes = [
     },
   },
   {
-    path: '/G1',
-    name: 'G1',
-    component: () => import('../views/practice/G1.vue')
+    path: '/point',
+    name: 'point',
+    component: () => import('../views/practice/point.vue')
   },
   {
-    path: '/G2',
-    name: 'G2',
-    component: () => import('../views/practice/G2.vue')
+    path: '/paper-package',
+    name: 'paper-package',
+    component: () => import('../views/practice/paper-package.vue')
   }, {
-    path: '/G3',
-    name: 'G3',
-    component: () => import('../views/practice/G3.vue')
+    path: '/exam',
+    name: 'exam',
+    component: () => import('../views/practice/exam.vue')
   }, {
-    path: '/G4',
-    name: 'G4',
-    component: () => import('../views/practice/G4.vue')
+    path: '/error-ques',
+    name: 'error-ques',
+    component: () => import('../views/practice/error-ques.vue')
   }, {
-    path: '/G5',
-    name: 'G5',
-    component: () => import('../views/practice/G5.vue')
+    path: '/assess',
+    name: 'assess',
+    component: () => import('../views/practice/assess.vue')
   },
   {
-    path: '/G6',
-    name: 'G6',
-    component: () => import('../views/practice/Attention.vue')
+    path: '/ques-cllect',
+    name: 'ques-cllect',
+    component: () => import('../views/practice/Attention.vue'),
+
   },
   // 我的
   {
     path: '/My',
     name: 'My',
-    component: () => import('../views/my/My'),
+    component: () => import('../views/my/My.vue'),
     meta: {
       showtab: true
     },
   },
+
+
   // 找回密码
   {
     path: '/find',
@@ -153,6 +139,7 @@ const routes = [
       showtab: false
     },
   },
+
   //搜索
   {
     path: '/search',
@@ -164,7 +151,27 @@ const routes = [
   {
     path: '/onetutoring',
     name: 'OneTutoring',
+    component: () => import('../views/lesson/OneTutoring.vue'),
+  },
+  // 登录
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/my/Login.vue')
+  },
+  // 找回密码
+  {
+    path: '/forget-pass',
+    name: "forget-pass",
+    component: () => import("../views/my/Forget-pass.vue"),
+
     component: () => import('../views/lesson/OneTutoring.vue')
+  },
+  // 注册
+  {
+    path: '/sms-login',
+    name: 'sms-login',
+    component: () => import('../views/my/Sms-login.vue')
   },
   {
     path: '/about',
@@ -175,9 +182,10 @@ const routes = [
     }
   },
   {
-    path:'/cou',
-    component:()=>import("../components/my/Cou.vue")
+    path: '/cou',
+    component: () => import("../components/my/Cou.vue")
   }
+
 ]
 
 const router = new VueRouter({

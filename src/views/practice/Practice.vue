@@ -8,28 +8,28 @@
       <div class="grid_top">
         <div>
           <div class="g-img">
-            <img src="/practice-img/01.png" @click="G1('/G1')" />
+            <img src="http://localhost:8080/practice-img/01.png" @click="G1('/point')" />
           </div>
           <span>考点专练</span>
         </div>
 
         <div>
           <div class="g-img">
-            <img src="/practice-img/02.png" @click="G1('/G2')" />
+            <img src="http://localhost:8080/practice-img/02.png" @click="G1('/paper-package')" />
           </div>
           <span>套卷练习</span>
         </div>
 
         <div>
           <div class="g-img">
-            <img src="/practice-img/03.png" @click="G1('/G3')" />
+            <img src="http://localhost:8080/practice-img/03.png" @click="G1('/exam')" />
           </div>
           <span>仿真模考</span>
         </div>
 
         <div>
           <div class="g-img">
-            <img src="/practice-img/04.png" @click="G1('/G4')" />
+            <img src="http://localhost:8080/practice-img/04.png" @click="G1('/error-ques')" />
           </div>
           <span>错题练习</span>
         </div>
@@ -38,14 +38,14 @@
       <div class="grid_bottom">
         <div>
           <div class="g-img">
-            <img src="/practice-img/05.png" @click="G1('/G5')" />
+            <img src="http://localhost:8080/practice-img/05.png" @click="G1('/assess')" />
           </div>
           <span>测评记录</span>
         </div>
 
         <div>
           <div class="g-img">
-            <img src="/practice-img/06.png" @click="G1('/G6')" />
+            <img src="http://localhost:8080/practice-img/06.png" @click="G1('/ques-cllect')" />
           </div>
           <span>习题收藏</span>
         </div>

@@ -70,7 +70,6 @@ export default {
 .div_header_nav {
   width: 99%;
   height: 1rem;
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,7 +99,6 @@ export default {
 .div_body_box2 {
   width: 30%;
   height: 100%;
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,13 +112,10 @@ export default {
 .div_body_box3 {
   width: 40%;
   height: 100%;
-  /* background-color: yellow; */
 }
 .div_body_box4 {
   width: 30%;
   height: 100%;
-  /* background-color: yellowgreen; */
-  /* text-align: center; */
   display: flex;
   align-items: center;
 }
@@ -134,13 +129,12 @@ export default {
 }
 .div_body_hidden {
   width: 100%;
-  height: 25rem;
-  background-color: rgb(238, 233, 211);
+  height: 24.5rem;
+  background-color: #f0f2f5;
 }
 .div_body_box3_div1 {
   width: 100%;
   height: 60%;
-  /* background-color: violet; */
   font-size: 0.34rem;
   display: flex;
   justify-content: space-between;
