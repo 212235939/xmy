@@ -1,6 +1,6 @@
 <template>
   <div>
-      <TesekeTop></TesekeTop>
+      <TesekeTop @onDetail="onDetail"></TesekeTop>
   </div>
 </template>
 
@@ -10,6 +10,12 @@ export default {
   components:{
      TesekeTop
   },
+  methods:{
+    onDetail(index){
+      console.log(index)
+      this.$router.push({path:'/details'})
+    }
+  }
 }
 </script>
 

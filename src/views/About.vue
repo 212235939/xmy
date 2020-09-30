@@ -1,8 +1,6 @@
 <template>
-<<<<<<< HEAD
   <div>
     
-=======
   <div class="body">
     <!-- User-logo -->
     <div class="user-logo">
@@ -35,22 +33,12 @@
         </van-form>
       </div>
     </div>
->>>>>>> e59cca5a3e514fee17f9942dba10d6ff0d06edb8
   </div>
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-
-}
-</script>
-
-<style>
-
-</style>
-=======
-  data() {
+ data() {
     return {
       username: "",
       password: "",
@@ -64,6 +52,10 @@ export default {
   },
 };
 </script>
+
+
+ 
+
 
 <style scoped>
 .body {
@@ -115,4 +107,3 @@ export default {
   border-bottom: #fd6d1c;
 }
 </style>
->>>>>>> e59cca5a3e514fee17f9942dba10d6ff0d06edb8
