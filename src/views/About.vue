@@ -1,78 +1,52 @@
 <template>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   <div>
-    
-=======
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
-  <div class="body">
-    <!-- User-logo -->
-    <div class="user-logo">
-      <img src="/User-logo.png" alt="" />
-    </div>
-    <div class="login">
-      <!-- 表单 -->
-      <div class="from">
-        <van-form @click="name">
-          <van-field
-            v-model="username"
-            placeholder="请输入用户名"
-            class="active"
-          />
-          <van-field
-            v-model="password"
-            type="password"
-            placeholder="请输入密码"
-          />
-          <!-- 验证 -->
-          <div class="proving">
-            <span>找回密码</span>
-            <span>注册/验证码登录</span>
-          </div>
-          <div style="margin: 16px">
-            <van-button round block @click="submit" class="btn"
-              >登录</van-button
-            >
-          </div>
-        </van-form>
+    <div class="body">
+      <!-- User-logo -->
+      <div class="user-logo">
+        <img src="/User-logo.png" alt />
+      </div>
+      <div class="login">
+        <!-- 表单 -->
+        <div class="from">
+          <van-form @click="name">
+            <van-field v-model="username" placeholder="请输入用户名" class="active" />
+            <van-field v-model="password" type="password" placeholder="请输入密码" />
+            <!-- 验证 -->
+            <div class="proving">
+              <span>找回密码</span>
+              <span>注册/验证码登录</span>
+            </div>
+            <div style="margin: 16px">
+              <van-button round block @click="submit" class="btn">登录</van-button>
+            </div>
+          </van-form>
+        </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> e59cca5a3e514fee17f9942dba10d6ff0d06edb8
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   </div>
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-}
-</script>
-
-<style>
-
-</style>
-=======
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   data() {
     return {
       username: "",
-      password: "",
+      password: ""
     };
   },
   methods: {
     name() {},
     submit() {
       // console.log("submit", values);
-    },
-  },
+    }
+  }
 };
 </script>
+
+<style>
+</style>
+
+
 
 <style scoped>
 .body {
@@ -111,7 +85,7 @@ export default {
   font-size: 0.2rem;
   display: flex;
   justify-content: space-between;
-  color:#999999;
+  color: #999999;
 }
 /* 提交按钮 */
 .btn {
@@ -123,9 +97,5 @@ export default {
 .active {
   border-bottom: #fd6d1c;
 }
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> e59cca5a3e514fee17f9942dba10d6ff0d06edb8
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
+

@@ -1,20 +1,12 @@
 <template>
   <div>
-<<<<<<< HEAD
-      约课记录
-=======
     <!-- 头部导航 -->
     <div class="div_header">
       <div class="iconfont icon-zuojiantou"></div>
       <div class="div_header_title">约课记录</div>
     </div>
 
-    <!-- 固定定位的留言标题div
-    <div class="div_fixed" @mousedown="start" @mouseup="stop" @mousemove="move">
-      <div class="Size iconfont icon-duanxin"></div>
-    </div> -->
-    <!-- 定位的拖拽事件子组件 -->
-    <Xuan></Xuan>
+ 
 
     <!-- 可选区域的内容 -->
     <van-tabs
@@ -46,27 +38,13 @@
         </div>
       </van-tab>
     </van-tabs>
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
-export default {
-
-}
-</script>
-
-<style>
-
-=======
-import "../../toolkit/rem.js";
-import Xuan from "../../components/Lesson/Xuan";
 
 export default {
-  components: {
-    Xuan,
-  },
+ 
   data() {
     return {
       active: 0,
@@ -117,5 +95,4 @@ export default {
   color: white;
   border: 1px solid rgb(255, 123, 0);
 }
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
 </style>

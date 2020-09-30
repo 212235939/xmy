@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    
-=======
   <div >
     <div class="add">
       <div class="box_top"> </div>
@@ -99,20 +95,11 @@
           </li>
         </ul>
 
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
   </div>
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-
-}
-</script>
-
-<style>
-
-=======
   data(){
     return{
       list:{
@@ -354,5 +341,4 @@ p{
     padding: 0px 0.35rem;
     box-sizing: border-box;
 }
->>>>>>> ace02d7ec64eb2c67149612ad05c5f1d93e2f7dd
 </style>
