@@ -7,7 +7,7 @@
 
     <div class="div_body_box">
       <div class="div_body_box2">
-        <img src="../../images/timg.jpg" alt="" />
+        <img src="" alt="" />
       </div>
       <div class="div_body_box3">
         <div class="div_body_box3_div1">杨德胜</div>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="div_imgs">
-      <img src="../../images/老师详情.png" alt="" />
+      <img src="" alt="" />
     </div>
     <div class="div_book_footer">
       <div style="margin-top: 0.3rem">立即预约</div>

@@ -10,73 +10,262 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    children: [
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import('../views/About.vue')
-      }
-    ]
+    meta: {
+      showtab: true
+    },
   },
+
+  {
+    path: '/teacherdetail',
+    component: () => import("../views/home/Teacher_Details.vue"),
+
+  },
+
+  //讲师详情
+  //   {
+  //     path: '/',
+  //     component: () => import("../views/home/Teacher_Details.vue"),
+  //   },
+  //明星详情
+    {
+      path:'/staedetail',
+      component:()=>import("../views/home/stardetail")
+    },
+  //   //  课程详情
+    {
+      path: '/cdetail',
+      component: () => import("../views/home/Details.vue")
+    },
+    {
+      path: '/goyue',
+      component: () => import("../views/home/Bookdetails.vue")
+    },
+    {
+      path: '/courses',
+      name: 'Course',
+      component: () => import('../views/courseDetails/Courses.vue')
+    },
+
+
+
+
+
+
+  {
+    path: '/datedate',
+    component: () => import("../views/lesson/data.vue")
+  },
+
   // 课程
   {
     path: '/Course',
     name: 'Course',
     component: () => import('../views/course/Course'),
-    children: [
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import('../views/About.vue')
-      }
+    meta: {
+      showtab: true
+    },
 
-    ]
+
+  },
+  {
+    path: '/courses',
+    name: 'Courses',
+    component: () => import('../views/courseDetails/Courses.vue'),
+
+    // meta:{
+    //   showtab:false
+    // }
+  },
+  {
+    path: '/details',
+    name: 'Details',
+    component: () => import('../views/courseDetails/Details.vue')
   },
   // 约课记录
   {
     path: '/Lesson',
     name: 'Lesson',
     component: () => import('../views/lesson/Lesson'),
-    children: [
-      {
-        path: '/Practice',
-        name: 'Practice',
-        component: () => import('../views/practice/Practice')
-      }
-    ]
+    meta: {
+      showtab: true
+    },
+
   },
   // 练习
   {
     path: '/Practice',
     name: 'Practice',
     component: () => import('../views/practice/Practice'),
-    children: [
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import('../views/About.vue')
-      }
-    ]
+    meta: {
+      showtab: true
+    },
+
   },
   // 我的
   {
     path: '/My',
     name: 'My',
     component: () => import('../views/my/My'),
-    children: [
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import('../views/About.vue')
-      }
-    ]
+    meta: {
+      showtab: true
+    },
+
+   
+
   },
+
+  // 找回密码
+  {
+    path: '/find',
+    name: 'Find',
+    component: () => import('../views/my/Find')
+  },
+
+
+  //我的里面的小路由
+  // ====================================================================
+
+  {
+    path: '/collect',
+    name: 'Collect',
+    component: () => import('../components/my/Collect.vue'),
+    meta: {
+      showtab: false
+    },
+  },
+  {
+    path: '/Sum',
+    name: 'Sum',
+    component: () => import('../components/my/Sum.vue'),
+    meta: {
+      showtab: false
+    },
+  },
+
+
+  {
+    path: '/attention',
+    name: 'Attention',
+    component: () => import('../components/my/Attention.vue'),
+    meta: {
+      showtab: false
+    },
+  },
+
+
+
+
+  {
+    path: '/Cou',
+    name: 'Cou',
+    component: () => import('../components/my/Cou'),
+    meta: {
+      showtab: false
+    },
+  },
+  {
+    path: '/setzhi',
+    name: 'setzhi',
+    component: () => import('../components/my/setzhi'),
+    meta: {
+      showtab: false
+    },
+  },
+  {
+    path: '/Coupon',
+    name: 'Coupon',
+    component: () => import('../components/my/Coupon'),
+    meta: {
+      showtab: false
+    },
+  },
+  {
+    path: '/UserCard',
+    name: 'UserCard',
+    component: () => import('../components/my/UserCard'),
+    meta: {
+      showtab: false
+    },
+  },
+
+
+  {
+    path: '/huis',
+    name: 'huis',
+    component: () => import('../components/my/huis'),
+    meta: {
+      showtab: false
+    },
+  },
+  {
+    path: '/feedback',
+    name: 'feedback',
+    component: () => import('../components/my/feedback.vue'),
+    meta: {
+      showtab: false
+    },
+  },
+ 
+
+  {
+    path: '/Pim',
+    name: 'Pim',
+    component: () => import('../components/my/Pim'),
+    meta: {
+      showtab: false
+    },
+  },
+
+
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/About.vue')
+  },
+
+
+
+  
+  // 意见反馈
+  {
+    path: "/feedback",
+    name: "feedback",
+    component: () => import("../components/my/feedback.vue")
+  },
+  // 在线客服
+  {
+    path: '/custome',
+    name: "custome",
+    component: () => import("../components/my/custome.vue")
+  },
+  {
+    path: '/Register',
+    name: "Register",
+    component: () => import("../views/my/Register")
+  },
+
+
+
+
+
+
+
+
+
+
+
+  //搜索
+  {
+    path: '/search',
+    name: 'Search',
+    component: () => import('../views/search/Search.vue')
+  },
+
   //一对一辅导
   {
     path: '/onetutoring',
     name: 'OneTutoring',
     component: () => import('../views/lesson/OneTutoring.vue'),
-
   },
   //讲师详情
   {
@@ -84,11 +273,46 @@ const routes = [
     name: 'Bookdetails',
     component: () => import('../views/lesson/Bookdetails.vue')
   },
+
+
+
   {
-    path: '/gun',
-    name: 'Gun',
-    component: () => import('../views/lesson/Gun.vue')
+    path: '/point',
+    name: 'point',
+    component: () => import('../views/practice/point.vue')
   },
+  {
+    path: '/paper-package',
+    name: 'paper-package',
+    component: () => import('../views/practice/paper-package.vue')
+  }, {
+    path: '/exam',
+    name: 'exam',
+    component: () => import('../views/practice/exam.vue')
+  }, {
+    path: '/error-ques',
+    name: 'error-ques',
+    component: () => import('../views/practice/error-ques.vue')
+  }, {
+    path: '/assess',
+    name: 'assess',
+    component: () => import('../views/practice/assess.vue')
+  },
+  {
+    path: '/ques-cllect',
+    name: 'ques-cllect',
+    component: () => import('../views/practice/Attention.vue'),
+  },
+
+  {
+    path: '/teacher_details',
+    name: 'Teacher_Details',
+    component: () => import('../views/lesson/Teacher_Details.vue'),
+  },
+
+
+
+
 ]
 
 const router = new VueRouter({

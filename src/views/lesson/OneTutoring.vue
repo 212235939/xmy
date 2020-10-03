@@ -1,8 +1,13 @@
 <template>
   <div>
+    <van-nav-bar title="一对一辅导" left-text="返回"  @click-left="onClickLeft">
+      <template #right>
+        <van-icon name="search" size="20" @click="gosearch" />
+      </template>
+    </van-nav-bar>
     <div class="div_header_nav">
       <div class="Size iconfont icon-zuojiantou" @click="back"></div>
-      <div style="color: red">一对一辅导</div>
+      <div style="color: black;font-size:18px">一对一辅导</div>
       <div class="Size iconfont icon-icon-search"></div>
     </div>
     <van-dropdown-menu>
@@ -223,7 +228,6 @@ export default {
 .div_header_nav {
   width: 99%;
   height: 1rem;
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -253,7 +257,6 @@ export default {
 .div_body_box2 {
   width: 30%;
   height: 100%;
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -267,13 +270,10 @@ export default {
 .div_body_box3 {
   width: 40%;
   height: 100%;
-  /* background-color: yellow; */
 }
 .div_body_box4 {
   width: 30%;
   height: 100%;
-  /* background-color: yellowgreen; */
-  /* text-align: center; */
   display: flex;
   align-items: center;
 }
@@ -293,7 +293,6 @@ export default {
 .div_body_box3_div1 {
   width: 100%;
   height: 60%;
-  /* background-color: violet; */
   font-size: 0.34rem;
   display: flex;
   justify-content: space-between;

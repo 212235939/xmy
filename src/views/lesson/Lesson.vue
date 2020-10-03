@@ -2,7 +2,6 @@
   <div>
     <!-- 头部导航 -->
     <div class="div_header">
-      <div class="iconfont icon-zuojiantou"></div>
       <div class="div_header_title">约课记录</div>
     </div> 
 
@@ -40,7 +39,6 @@
 </template>
 
 <script>
-import "../../toolkit/rem.js";
 
 export default {
  
@@ -61,16 +59,15 @@ export default {
 
 <style scoped>
 .div_header {
-  width: 59%;
-  /* background-color: red; */
-  /* border:1px solid red; */
+  width: 100%;
   height: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  /* font-weight: bold; */
+  color:gray;
 }
 .div_header_title {
-  font-size: 0.4rem;
+  font-size: 0.5rem;
+  margin-top:0.1rem;
 }
 .div_tab1 {
   width: 100%;
