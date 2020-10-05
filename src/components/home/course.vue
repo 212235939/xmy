@@ -2,9 +2,9 @@
   <div class="teacher">
     <p class="p1">精品课堂</p>
     <div class="t" v-for="(item,index) in list" :key="index" @click="f(item)">
-      <div class="t_one">{{item.title}}<p>{{item.title_p}}</p></div>
+      <div class="t_one">{{item.title}}<p class="p2">{{item.title_p}}</p></div>
       <div class="t_two"><img :src="item.img" class="img"><div class="a">{{item.name}}</div></div>
-      <div class="t_three"><div>{{item.num}}</div><div>{{item.price}}</div></div>
+      <div class="t_three"><div class="r_one">{{item.num}}</div><div class="r_two">{{item.price}}</div></div>
     </div> 
   </div>
 </template>
@@ -58,25 +58,41 @@ export default {
 </script>
 
 <style scoped>
-.teacher {
+.r_one{
+  font-size: 12px;
+  color: rgb(140, 140, 140);
+}
+.r_two{
+  font-size: 15px;
+  color: rgb(83, 164, 38);
+}
+.p2{
+  margin-top: 0.02rem;
+  color:gray;
+  font-size: 11px;
 }
 .a{
   margin-left: 0.2rem;
+  font-size: 11px;
+  color: rgb(140, 140, 140);
 }
 .t_one {
   width: 94%;
   height: 42%;
   margin: 0 auto;
+  line-height: 0.5rem;
 }
 .t_two {
-  width: 100%;
   height: 30%;
   display: flex;
   align-items: center;
+  width: 90%;
+  border-bottom: 1px solid #f5f5f5;
+  margin: 0 auto;
 }
 .t_three {
   width: 100%;
-  height: 20%;
+  height: 26%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,26 +106,27 @@ export default {
 .t {
   width: 100%;
   height: 3.8rem;
-  margin-top: 0.1rem;
+  margin-top: 0.25rem;
   padding-top: 0.3rem;
   background-color: white;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  align-content: space-around;
 }
 .img{
-    width: 1rem;
-    height: 1rem;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 50%;
-    margin-left: 0.4rem;
+    margin-left: -0.1rem;
 }
 .t>div{
     font-size: 13px;
 }
 .p1 {
   /* width: 90%; */
-  border-left: 2px solid slateblue;
-  font-size: 15px;
+  border-left: 2px solid rgb(235, 97, 0);
+  font-size: 13px;
   padding-left: 0.2rem;
 }
 </style>

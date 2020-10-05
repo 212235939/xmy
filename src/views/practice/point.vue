@@ -24,9 +24,12 @@
         </van-sidebar>
       </div>
       <div class="row_right">
-        <span v-for="(item, index) in twoList" :key="index">{{
-          item.title
-        }}</span>
+        <span
+          v-for="(item, index) in twoList"
+          :key="index"
+          @click="deta(item)"
+          >{{ item.title }}</span
+        >
       </div>
     </div>
   </div>
@@ -54,6 +57,15 @@ export default {
     },
     cate(id) {
       this.twoList = this.oneList[id].children;
+    },
+    deta(item) {
+      console.log(item.title);
+      this.$router.push({
+        path: "/points",
+        query: {
+          items: item,
+        },
+      });
     },
   },
 };

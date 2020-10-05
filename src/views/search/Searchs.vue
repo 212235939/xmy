@@ -1,19 +1,21 @@
 <template>
   <div>
     <div>
-      <van-search v-model="value" show-action shape="round" placeholder="请输入关键字" @search="onSearch">
+      <van-search v-model="value" show-action shape="round" placeholder="请输入关键字" @search="onSearch" @input="onqqq" @blur="ji">
         <template #left>
           <div>
-            <van-icon name="arrow-left" size="25" @click="onFan"/>
+            <van-icon name="arrow-left" size="20" @click="onFan" />
           </div>
         </template>
         <template #action>
-          <div>取消</div>
+          <div style="font-size:0.3rem" v-show="!star">取消</div>
+          <div style="font-size:0.3rem" v-show="star">搜索</div>
         </template>
       </van-search>
     </div>
 
-    <div>
+<div v-show="isss">
+  <div>
       <van-cell>
         <template #title>
           <span class="custom-title">历史记录</span>
@@ -36,6 +38,8 @@
         <span style="color:black">{{item}}</span>
       </van-button>
     </div>
+</div>
+  
   </div>
 </template>
 
@@ -45,6 +49,9 @@ export default {
     return {
       value: "",
       history: [],
+      isss:true,
+      star: false,  
+
     };
   },
   created() {
@@ -52,13 +59,37 @@ export default {
     if (history) {
       this.history = JSON.parse(history);
     }
+
+   
+  },
+  mounted(){
+   
   },
   methods: {
+    onqqq(){
+      
+        if(this.value!=""){
+      this.isss = false
+      this.star = true;
+    }else{
+      this.isss = true
+      this.star = false;
+
+    }
+          
+    },
+    ji(){
+this.value = ""
+    },
     onSearch(val) {
       this.save(val);
+      this.isss = true
     },
     onClick(item) {
       this.save(item);
+
+      this.isss = false
+this.star = true;
     },
     save(item) {
       this.value = item;
@@ -78,9 +109,9 @@ export default {
       this.history = [];
       localStorage.history = JSON.stringify(this.history);
     },
-    onFan(){
-       this.$router.go(-1)
-    }
+    onFan() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>

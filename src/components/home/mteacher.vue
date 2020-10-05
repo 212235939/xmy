@@ -14,10 +14,6 @@
         <span class="iconfont iconshaixuan"></span>筛选
       </div>
     </div>
-
-
-
-
     <div class="vantselect">
         <van-dropdown-menu>
       <van-dropdown-item v-model="value1" :options="option1" />

@@ -22,7 +22,7 @@ export default {
           title: "付举",
           img:
             "https://msmk2019.oss-cn-shanghai.aliyuncs.com/uploads/image/2019X3gWvILU7J1571983543.png",
-          detail: "付举从事装逼行业多年，至今仍未遇到对手"
+          detail: "付举从事装X行业多年，至今仍未遇到对手"
         },
         {
           title: "鑫鹏",
@@ -49,21 +49,28 @@ export default {
 
 <style scoped>
 .teacher {
-  /* width: 95%; */
+  
+}
+.t_top{
+  font-size: 0.3rem;
+}
+.t_bottom{
+  color: rgb(183, 183, 183);
+  margin-top: 0.07rem;
 }
 .t {
   display: flex;
   width: 100%;
   height: 1.2rem;
-  margin-top: 0.1rem;
+  margin-top: 0.25rem;
   padding-top: 0.3rem;
   background-color: white;
   border-radius: 5px;
 }
 .p1 {
   /* width: 90%; */
-  border-left: 2px solid slateblue;
-  font-size: 15px;
+  border-left: 2px solid rgb(235, 97, 0);
+  font-size: 13px;
   padding-left: 0.2rem;
 }
 .img {
@@ -80,6 +87,6 @@ export default {
   display: flex;
   flex-direction: column;
   margin-left: 0.2rem;
-  margin-top: 0.1rem;
+  margin-top: 0.06rem;
 }
 </style>

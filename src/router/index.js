@@ -27,10 +27,7 @@ const routes = [
   //     component: () => import("../views/home/Teacher_Details.vue"),
   //   },
   //明星详情
-    {
-      path:'/staedetail',
-      component:()=>import("../views/home/stardetail")
-    },
+  
   //   //  课程详情
     {
       path: '/cdetail',
@@ -68,6 +65,39 @@ const routes = [
 
   },
   {
+    path: '/CourseDetails',
+    name: 'CourseDetails',
+    component: () => import('../views/course/CourseDetails'),
+    meta: {
+      showtab: false
+    },
+
+
+  },
+
+
+      {
+        path: '/apply',
+        name: 'Apply',
+        component: () => import('../views/course/Apply.vue')
+      },
+      {
+        path: '/search',
+        name: 'Search',
+        component: () => import('../views/course/Search.vue')
+      },
+
+
+
+
+
+
+
+
+
+
+
+  {
     path: '/courses',
     name: 'Courses',
     component: () => import('../views/courseDetails/Courses.vue'),
@@ -101,6 +131,7 @@ const routes = [
     },
 
   },
+
   // 我的
   {
     path: '/My',
@@ -114,12 +145,31 @@ const routes = [
 
   },
 
+  {
+    path: '/nickname',
+    name: 'Nickname',
+    component: () => import('../views/my/Nickname')
+  },
+  {
+    path: '/subject',
+    name: 'Subject',
+    component: () => import('../views/my/Subject')
+  },
+  {
+    path: '/sex',
+    name: 'Sex',
+    component: () => import('../views/my/Sex')
+  },
   // 找回密码
   {
     path: '/find',
     name: 'Find',
     component: () => import('../views/my/Find')
   },
+
+
+
+
 
 
   //我的里面的小路由
@@ -214,6 +264,25 @@ const routes = [
     meta: {
       showtab: false
     },
+    // 个人信息
+  },
+  {
+    path: '/Persmation',
+    name: 'Persmation',
+    component: () => import('../components/my/Persmation'),
+    meta: {
+      showtab: false
+    },
+  },
+
+
+  {
+    path: '/message',
+    name: 'message',
+    component: () => import('../components/my/message'),
+    meta: {
+      showtab: false
+    },
   },
 
 
@@ -256,9 +325,9 @@ const routes = [
 
   //搜索
   {
-    path: '/search',
-    name: 'Search',
-    component: () => import('../views/search/Search.vue')
+    path: '/Searchs',
+    name: 'Searchs',
+    component: () => import('../views/search/Searchs.vue')
   },
 
   //一对一辅导
@@ -280,6 +349,11 @@ const routes = [
     path: '/point',
     name: 'point',
     component: () => import('../views/practice/point.vue')
+  },
+  {
+    path: '/points',
+    name: 'points',
+    component: () => import('../views/practice/points.vue')
   },
   {
     path: '/paper-package',

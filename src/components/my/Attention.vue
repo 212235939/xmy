@@ -98,6 +98,9 @@ bady{
     width: 0.9rem;
     height: 0.9rem;
 }
+.van-nav-bar .van-icon {
+    color: #000000;
+}
 .aset{
     font-size: 3.2vw;
     color: #b7b7b7;

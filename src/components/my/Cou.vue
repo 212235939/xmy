@@ -160,4 +160,7 @@ export default {
     width: 47%;
     height: 2.5rem;
 }
+.van-nav-bar .van-icon {
+    color: #000000;
+}
 </style>

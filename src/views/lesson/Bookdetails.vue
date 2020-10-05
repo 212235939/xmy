@@ -1,17 +1,20 @@
 <template>
   <div>
     <div class="div_book_header">
-      <van-icon name="arrow-left" @click="back" style="margin-top:0.3rem"/>
+      <van-icon name="arrow-left" @click="back" style="margin-top: 0.3rem" />
       <div class="div_book_title">预约课程</div>
     </div>
 
     <div class="div_body_box">
       <div class="div_body_box2">
-        <img src="../../images/timg.jpg" alt="" />
+        <img
+          src="https://baijiayun-wangxiao.oss-cn-beijing.aliyuncs.com/uploads/avatar.jpg"
+          alt=""
+        />
       </div>
       <div class="div_body_box3">
-        <div class="div_body_box3_div1">杨德胜</div>
-        <div class="div_body_box3_div2">男 30年教龄</div>
+        <div class="div_body_box3_div1">李凡</div>
+        <div class="div_body_box3_div2">男 10年教龄</div>
       </div>
       <div class="div_body_box4">
         <button @click="gun">查看详情</button>
@@ -37,8 +40,8 @@
     <div class="div_imgs">
       <img src="../../images/老师详情.png" alt="" />
     </div>
-    <div class="div_book_footer">
-      <div style="margin-top: 0.3rem">立即预约</div>
+    <div class="div_book_footer" @click="yu_yue">
+      <div style="margin-top:0.17rem">立即预约</div>
     </div>
   </div>
 </template>
@@ -115,10 +118,13 @@ export default {
       this.SeleteIndex = index;
     },
     back() {
-      window.history.back();
+      this.$router.push("/onetutoring");
     },
     gun() {
       this.$router.push("/teacher_details");
+    },
+    yu_yue() {
+      this.$toast("请先选择预约时间");
     },
   },
 };
@@ -146,20 +152,20 @@ export default {
 }
 
 .div_body_box {
-  width: 90%;
-  height: 1.4rem;
+  width: 95%;
+  height: 1.6rem;
   background-color: white;
   margin: 10px 10px 0px 0px;
   border-radius: 0.1rem;
   display: flex;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-left: 0.32rem;
+  margin-left: 0.2rem;
   margin-top: -1rem;
 }
 
 .div_body_box2 {
-  width: 30%;
+  width: 20%;
   height: 100%;
   /* background-color: red; */
   display: flex;
@@ -168,12 +174,12 @@ export default {
 }
 .div_body_box2 img {
   width: 50%;
-  height: 70%;
+  height: 50%;
   border-radius: 50%;
   margin-left: 0.5rem;
 }
 .div_body_box3 {
-  width: 40%;
+  width: 50%;
   height: 100%;
   /* background-color: yellow; */
 }
@@ -187,9 +193,9 @@ export default {
 }
 .div_body_box4 button {
   width: 1.5rem;
-  height: 0.7rem;
+  height: 0.6rem;
   border-radius: 0.6rem;
-  border: 1px solid red;
+  border: 1px solid orange;
   background-color: white;
   color: red;
 }
@@ -202,7 +208,7 @@ export default {
   width: 100%;
   height: 60%;
   /* background-color: violet; */
-  font-size: 0.34rem;
+  font-size: 0.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -239,7 +245,7 @@ export default {
   overflow: scroll;
 }
 .div_book_wrapper::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 .div_book_boxs {
   /* width: 3rem; */
@@ -258,7 +264,7 @@ export default {
 .active {
   color: orange;
   height: 1.1rem;
-  border-radius: 1rem;
+  border-radius: 0.06rem;
   border-bottom: 3px solid blue;
 }
 .div_imgs {
@@ -274,11 +280,11 @@ export default {
 }
 .div_book_footer {
   width: 100%;
-  height: 1rem;
+  height: 0.8rem;
   background-color: rgb(231, 93, 28);
   position: fixed;
   bottom: 0rem;
-  font-size: 0.4rem;
+  font-size: 0.34rem;
   color: white;
   text-align: center;
 }

@@ -49,5 +49,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.van-nav-bar .van-icon {
+    color: #000000;
+}
 </style>

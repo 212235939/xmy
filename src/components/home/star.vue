@@ -60,24 +60,27 @@ export default {
 <style scoped>
 .sta {
 }
+.r_tot{
+  color: gray;
+}
 .p1 {
   /* width: 90%; */
-  border-left: 2px solid slateblue;
-  font-size: 15px;
+  border-left: 2px solid rgb(235, 97, 0);
+  font-size: 13px;
   padding-left: 0.2rem;
 }
 .t {
   width: 100%;
   height: 1.2rem;
-  margin-top: 0.1rem;
+  margin-top: 0.25rem;
   padding-top: 0.3rem;
   background-color: white;
   border-radius: 5px;
   display: flex;
 }
 .img {
-  width: 1rem;
-  height: 1rem;
+  width: 0.9rem;
+  height: 0.9rem;
   border-radius: 50%;
   margin-left: 0.4rem;
 }

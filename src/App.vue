@@ -81,6 +81,12 @@ export default {
 </script>
 
 <style >
+.van-nav-bar .van-icon {
+    color: #000000;
+}
+.van-nav-bar{
+  height: 39px;
+}
 .biwqfoqwo {
   display: flex;
   flex-direction: column;
