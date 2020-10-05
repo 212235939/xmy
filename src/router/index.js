@@ -31,7 +31,7 @@ const routes = [
   //   //  课程详情
     {
       path: '/cdetail',
-      component: () => import("../views/home/Details.vue")
+      component: () => import("../views/home/CourseDetails")
     },
     {
       path: '/goyue',

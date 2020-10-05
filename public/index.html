@@ -25,17 +25,11 @@
   </body>
 </html>
 <script>
-function ready() {
-                var u = navigator.userAgent;
-                var winW = document.documentElement.clientWidth;
-                if (!!!u.match(/AppleWebKit.*Mobile.*/)) {
-                    winW = 414;
-                    document.getElementsByClassName('wraper')[0].style.width = '' + winW + 'px';
-                }
-                document.documentElement.style.fontSize = winW / 7.5 + 'px';
-            }
-            ready();
-            window.addEventListener("resize", ready, false);
+function rem() {
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px"
+  }
+  window.onresize = rem;
+  rem()
 
 
 </script>
