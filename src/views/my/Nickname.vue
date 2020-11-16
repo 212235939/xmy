@@ -3,24 +3,48 @@
     <div class="div_header">
       <div @click="icon"><van-icon name="arrow-left" size="20" /></div>
       <div>修改个人信息</div>
-      <div>保存</div>
+      <div @click="bao">保存</div>
     </div>
     <div class="div_sty2"></div>
     <div class="div_sty">
-      <input type="text" class="input" ref="inputs" placeholder="1893****713"/>
+      <input type="text" class="input" v-model="username" />
     </div>
   </div>
 </template>
 
 <script>
+import { MyMy, MySex } from "../../views/api/api.js";
 export default {
+  data() {
+    return {
+      username: "",
+    };
+  },
   methods: {
     icon() {
       this.$router.push("/pim");
     },
+    bao() {
+      MySex({ nickname: this.username }).then((res) => {
+        console.log(res);
+        if (res.data.code == 200) {
+          this.$router.push("/pim");
+          this.$toast("昵称更新成功");
+        }
+      });
+    },
   },
-  created() {
-    // this.$refs.inputs.innertext = "18937715713";
+  mounted() {
+    //请求数据来获取登录后的用户名
+    MyMy().then((res) => {
+      console.log(res);
+      if (res.data.code == 200) {
+        this.username = res.data.data.nickname;
+        console.log(this.username);
+      } else {
+        this.$toast(res.data.msg);
+      }
+    });
   },
 };
 </script>

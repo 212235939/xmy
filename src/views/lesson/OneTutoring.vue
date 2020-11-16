@@ -5,7 +5,7 @@
       <div style="color: gray; font-size: 15px">一对一辅导</div>
       <div><van-icon name="search" /></div>
     </div>
-    <van-dropdown-menu class="div_menu">
+    <van-dropdown-menu class="div_menu" :overlay="false">
       <van-dropdown-item title="选择上课时间" @open="fff" @close="ddd">
         <div class="div_van_item" v-show="isTab">
           <div class="div_prop_absolut">
@@ -401,9 +401,9 @@
       </div>
       <div class="div_genduo">没有更多了</div>
     </div>
-      <div class="ads">
+    <!-- <div class="ads">
 
-      </div>
+      </div> -->
     <van-popup v-model="show" position="bottom" :style="{ height: '40%' }">
       <div class="sss">
         <div>取消</div>
@@ -411,8 +411,8 @@
       </div>
       <van-area title="标题" :area-list="areaList" class="pop_area" />
     </van-popup>
-      
-     <van-popup v-model="shows" position="bottom" :style="{ height: '40%' }">
+
+    <van-popup v-model="shows" position="bottom" :style="{ height: '40%' }">
       <div class="sss">
         <div>取消</div>
         <div>确认</div>
@@ -423,6 +423,7 @@
 </template>
 
 <script>
+import { myOneTutoring, MyTeacher } from "../api/api.js";
 export default {
   data() {
     return {
@@ -493,7 +494,7 @@ export default {
       isShow: true,
       isTab: false,
       show: false,
-      shows:false,
+      shows: false,
       areaList: {
         province_list: {
           110000: "01",
@@ -543,6 +544,17 @@ export default {
       },
     };
   },
+  async mounted() {
+    // var a = await myOneTutoring({ page: 1, limit: 10 });
+    // console.log(a);
+
+    var a = await MyTeacher({
+      page: 1,
+      limit: 10,
+      attr_val_id: 6,
+    });
+    console.log(a);
+  },
   methods: {
     back() {
       this.$router.push("/lesson");
@@ -576,28 +588,28 @@ export default {
     kaishi() {
       this.show = true;
     },
-    jie(){
-      this.shows=true
-    }
+    jie() {
+      this.shows = true;
+    },
   },
 };
 </script>
 
 <style scoped>
-.ads{
+.ads {
   width: 100%;
   height: 10rem;
   background: red;
 }
-.van-dropdown-item__content{
-      max-height: 100% !important;
+.van-dropdown-item__content {
+  max-height: 100% !important;
 }
-.van-popup--top{
- max-height: 100% !important;
+.van-popup--top {
+  max-height: 100% !important;
 }
 
-.van-popup{
- max-height: 100% !important;
+.van-popup {
+  max-height: 100% !important;
 }
 /* .div_van_item{
   height: 11rem;
@@ -760,7 +772,7 @@ export default {
 .div_sex {
   width: 1.4rem;
   height: 0.6rem;
-  background-color:  rgb(247, 240, 240);
+  background-color: rgb(247, 240, 240);
   margin: 0rem 0.3rem;
   font-size: 0.33rem;
   text-align: center;
@@ -910,14 +922,14 @@ export default {
   position: relative;
   top: -3rem;
 }
-.sss{
+.sss {
   width: 96%;
-  margin-left:0.2rem;
+  margin-left: 0.2rem;
   position: relative;
-  top:0.2rem;
+  top: 0.2rem;
   z-index: 999999999999999999999999999999999999;
   display: flex;
   justify-content: space-between;
-  color:orange;
+  color: orange;
 }
 </style>

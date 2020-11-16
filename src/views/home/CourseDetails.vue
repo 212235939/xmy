@@ -7,8 +7,6 @@
         </template>
         <template #right>
           <van-cell @click="showPopup">
-            <!-- <van-icon name="share-o" class="black"/> -->
-            <!-- <span class="iconfont iconfenxiang"></span> -->
             <span class="iconfont iconfenxiang"></span>
           </van-cell>
         </template>
@@ -146,13 +144,12 @@
           <van-button type="primary" color="orange" size="mini"
             >回放</van-button
           >
-          <span>第一讲第一课时</span>
+          <span style="color: gray">第一讲第一课时</span>
           <p>李青 03月16日 18：30-19：30</p>
         </div>
       </div>
     </div>
 
-    <!-- <van-submit-bar button-text="立即报名" @submit="onButton" /> -->
     <div class="bottom" @click="onButton">
       <span>立即报名</span>
     </div>
@@ -163,12 +160,10 @@
 export default {
   data() {
     return {
-      // aa:false,
       show: false,
       rate: 3,
       gun: false,
       active: "8",
-
       star: false,
     };
   },
@@ -178,9 +173,6 @@ export default {
   methods: {
     onon() {
       console.log();
-      //     if(index == 0){
-
-      //     }
       console.log(this.refs.tabs);
     },
 
@@ -232,17 +224,16 @@ export default {
   background: white;
 }
 .box1 {
+  /* height: 1rem; */
   background: white;
-
   width: 100%;
-  height: 2rem;
+  height: 1rem;
   margin-top: 0.5rem;
   /* margin-left: 0.3rem; */
   /* border: 1px solid red; */
 }
 .box2 {
   background: white;
-
   width: 100%;
   height: 8rem;
   margin-top: 0.5rem;

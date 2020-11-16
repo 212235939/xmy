@@ -35,41 +35,46 @@
     </div>
 
     <div class="wer">
-      <div @click="comment">
-        <span class="iconfont iconbi"></span>写评论
-      </div>
+      <div @click="comment"><span class="iconfont iconbi"></span>写评论</div>
       <div @click="onKe">
-        <span  class="iconfont icongengduo-2"></span>课程详情
+        <span class="iconfont icongengduo-2"></span>课程详情
       </div>
-      <div>
-        <span class="iconfont iconlajifenlei"></span>列表移除
-      </div>
+      <div><span class="iconfont iconlajifenlei"></span>列表移除</div>
     </div>
 
-
-<van-popup v-model="show">
-    
-  <div class="tan">
-      <div class="t_top">星级：<van-rate icon="like" void-icon="like-o" v-model="ping"/></div>
-      <div class="t_c">内容：<textarea id="" cols="30" rows="7" v-model="text"></textarea></div>
-      <div class="t_b"><van-button type="primary" hairline plain size="normal" @click="submit">提交</van-button></div>
-  </div>
-
-</van-popup>
-
-
+    <van-popup v-model="show">
+      <div class="tan">
+        <div class="t_top">
+          星级：<van-rate icon="like" void-icon="like-o" v-model="ping" />
+        </div>
+        <div class="t_c">
+          内容：<textarea id="" cols="30" rows="7" v-model="text"></textarea>
+        </div>
+        <div class="t_b">
+          <van-button
+            type="primary"
+            hairline
+            plain
+            size="normal"
+            @click="submit"
+            >提交</van-button
+          >
+        </div>
+      </div>
+    </van-popup>
   </div>
 </template>
 
 <script>
+ 
 export default {
-    data(){
-        return{
-            show:false,
-            ping:2,
-            text:''
-        }
-    },
+  data() {
+    return {
+      show: false,
+      ping: 2,
+      text: "",
+    };
+  },
   methods: {
     a() {
       this.$router.go(-1);
@@ -77,37 +82,38 @@ export default {
     onClickRight() {
       this.$router.push("/datedate");
     },
-    comment(){
-        this.show = true
+    comment() {
+      this.show = true;
     },
-    submit(){
-        console.log(this.ping+`星`,this.text)
-        this.show = false
+    submit() {
+      console.log(this.ping + `星`, this.text);
+      this.show = false;
     },
-    onKe(){
-      this.$router.go('-1');
-    }
-  }
+    onKe() {
+      this.$router.go("-1");
+    },
+  },
+  
 };
 </script>
 
 <style scoped>
-.tan{
-    width: 95vw;
-    height: 4.5rem;
-    border: 1px solid white;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.tan {
+  width: 95vw;
+  height: 4.5rem;
+  border: 1px solid white;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.t_c{
-    display: flex;
+.t_c {
+  display: flex;
 }
-.t_b{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.t_b {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .wer {
   width: 100%;
@@ -164,5 +170,4 @@ export default {
   display: flex;
   align-items: center;
 }
-
 </style>

@@ -11,79 +11,77 @@
 
       <div class="teacher">
         <div class="teacher_img">
-          <img src="../../assets/tou_xiang.jpg" class="img1" alt />
+          <img :src="imgs" class="img1" alt />
         </div>
-
         <div class="teacher_con">
           <div class="teacher_con_div1">
-            李凡
+            {{ names }}
             <span class="span1" style="font-size: 10px">M20</span>
           </div>
           <div class="teacher_con_div2">男 30年教龄</div>
         </div>
 
         <div class="teacher_btn">
-          <van-button round type="info" class="guan_zhu" @click="guan">{{title}}</van-button>
+          <van-button round type="info" class="guan_zhu" @click="guan">{{
+            title
+          }}</van-button>
         </div>
       </div>
     </div>
-    <!-- <div class="div_title4">
-      <div>幽默风趣</div>
-      <div>分析到位</div>
-      <div>亲和力强</div>
-      <div>讲解专业</div>
-    </div>-->
     <div class="content">
       <div class="contents">
         <van-tabs v-model="active" title-active-color="rgb(238,97,82)">
           <van-tab title="讲师介绍" class="jie_shao">
-            <div class="age">
-              教学年龄
-              <span class="s_age">30年</span>
+            <div v-show="this.SpeakerList == ''" class="div_xianshi">
+              <div class="div_names">暂时没有任何介绍幺</div>
+              <img
+                src="https://img95.699pic.com/photo/50166/7784.jpg_wh860.jpg!/both/590x400"
+                alt=""
+              />
             </div>
-            <div class="price">
-              授课价格
-              <span class="s_price">400学习币</span>
+
+            <div class="div_course">
+              {{ Course }}
             </div>
-            <div class="jian_jie">
-              <div class="left">老师简介</div>
-              <div
-                class="right"
-              >杨老师，特级教师，多次被中国数学会评为全国高中数学竞联赛优秀教练员。长期从事名校理科班的数学教学核竞赛辅导工作。辅导学生参加全国高中数学联赛有数百人次，获全国高中联赛有数百人此获全国高中数学联赛一、二、三等奖，数十人被免试保送到清华大学、北京大学等名牌大学学习。十多人获CMO获一、二、三等奖，一人获IMO金牌。特别是今年大学生实行自主招生，有很多同学通过上他的辅导课进入清华大学，北京大学，上个还交通大学等。</div>
-            </div>
-            <van-button type="warning" class="yu_yue" color="rgb(235,97,0)">立即预约</van-button>
+
+            <van-button type="warning" class="yu_yue" color="rgb(235,97,0)"
+              >立即预约</van-button
+            >
           </van-tab>
           <van-tab title="主要课程" class="ke_cheng">
-
-            <div class="t" v-for="(item,index) in list" :key="index" @click="f(item)">
-              <div class="t_one">
-                {{item.title}}
-                <p class="p2">{{item.title_p}}</p>
-              </div>
-              <div class="t_two">
-                <img :src="item.img" class="imgqwe" />
-                <div class="a">{{item.name}}</div>
-              </div>
-              <div class="t_three">
-                <div class="r_one">{{item.num}}</div>
-                <div class="r_two">{{item.price}}</div>
-              </div>
-            </div>
-
-            <van-button type="warning" class="yu_yue2" color="rgb(235,97,0)">立即预约</van-button>
-          </van-tab>
-          <van-tab title="学员评价" class="ping_jia">
-            <div class="asd">
-              <div class="picture">
+            <div v-show="this.SpeakerList == ''" class="div_xianshi">
+              <div class="div_names">现在暂时没有课程</div>
               <img
-                src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2165691866,2570924737&fm=26&gp=0.jpg"
-                alt
-                class="picture_wu"
+                src="https://tse2-mm.cn.bing.net/th/id/OIP.F57ksHlKRmnM6mBeOLKNPQHaKe?w=129&h=182&c=7&o=5&dpr=1.25&pid=1.7"
+                alt=""
               />
-              <p class="zan_wu">暂无评价</p>
             </div>
+            <div
+              v-for="(item, index) in SpeakerList"
+              :key="index"
+              class="div_space"
+            >
+              <div class="div_space2">
+                <img :src="item.cover_img" alt="" />
+              </div>
+              <div class="div_space3">
+                <div class="div_spaces2">
+                  <div class="div_ttt">{{ item.title }}</div>
+                </div>
+                <div class="div_spaces3">
+                  <div class="divs_space">
+                    <div class="div_ttt2">{{ item.sales_num }}人已报名</div>
+                  </div>
+                  <div class="divs2_space">
+                    <div class="div_ttt2">免费</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <van-button type="warning" class="yu_yue3" color="rgb(235,97,0)">立即预约</van-button>
+
+            <van-button type="warning" class="yu_yue2" color="rgb(235,97,0)"
+              >立即预约</van-button
+            >
           </van-tab>
         </van-tabs>
       </div>
@@ -91,46 +89,17 @@
   </div>
 </template>
 <script>
+import { Indexinfo, Indexteacher, Indexspeaker } from "../api/api.js";
 export default {
   data() {
     return {
+      Course: "",
       active: 0,
       title: "关注",
-      t:'已关注',
-       list:[
-        {
-          title:'每时每刻特辑讲师-自主招生冲刺讲座6-多元方程组与可转化为多元方程组问题',
-          title_p:'共1课时',
-          img:'https://msmk2019.oss-cn-shanghai.aliyuncs.com/uploads/image/2019X3gWvILU7J1571983543.png',
-          name:'奥利给',
-          num:'138人已报名',
-          price:'免费'
-        },
-        {
-          title:'每时每刻特辑讲师-自主招生冲刺讲座6-多元方程组与可转化为多元方程组问题',
-          title_p:'共2课时',
-          img:'https://msmk2019.oss-cn-shanghai.aliyuncs.com/uploads/image/2019X3gWvILU7J1571983543.png',
-          name:'给爷冲',
-          num:'145人已报名',
-          price:'免费'
-        },
-        {
-          title:'每时每刻特辑讲师-自主招生冲刺讲座6-多元方程组与可转化为多元方程组问题',
-          title_p:'共3课时',
-          img:'https://msmk2019.oss-cn-shanghai.aliyuncs.com/uploads/image/2019X3gWvILU7J1571983543.png',
-          name:'给里奥',
-          num:'186人已报名',
-          price:'免费'
-        },
-        {
-          title:'每时每刻特辑讲师-自主招生冲刺讲座6-多元方程组与可转化为多元方程组问题',
-          title_p:'共4课时',
-          img:'https://msmk2019.oss-cn-shanghai.aliyuncs.com/uploads/image/2019X3gWvILU7J1571983543.png',
-          name:'给爷冲',
-          num:'112人已报名',
-          price:'免费'
-        },
-      ]
+      t: "已关注",
+      names: "",
+      imgs: "",
+      SpeakerList: [],
     };
   },
   methods: {
@@ -139,13 +108,32 @@ export default {
     },
     guan() {
       this.$toast("已关注");
-      this.title =this.t;
-    }
-  }
+      this.title = "已关注";
+    },
+  },
+
+  async mounted() {
+    var taeid = this.$route.query.id;
+    console.log(taeid);
+    var a = await Indexinfo(taeid);
+    console.log(a.data.data.intro);
+    this.Course = a.data.data.intro;
+
+    //讲师表头信图片以及名字
+    var teacher = await Indexteacher(taeid);
+    console.log(teacher.data.data.teacher);
+    this.imgs = teacher.data.data.teacher.avatar;
+    this.names = teacher.data.data.teacher.real_name;
+
+    //请求讲师主讲课程数据
+    var speaker = await Indexspeaker({ page: 1, limit: 10, teacher_id: taeid });
+    console.log(speaker.data.list);
+    this.SpeakerList = speaker.data.list;
+  },
 };
 </script>
 <style scoped>
-.a{
+.a {
   margin-left: 0.2rem;
   font-size: 11px;
   color: rgb(140, 140, 140);
@@ -172,16 +160,16 @@ export default {
   align-items: center;
   flex-direction: row;
 }
-.t_three>div{
-    width: 2rem;
-    display: flex;
-    justify-content: space-around;
+.t_three > div {
+  width: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
-.imgqwe{
-    width: 0.7rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    margin-left: -0.1rem;
+.imgqwe {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  margin-left: -0.1rem;
 }
 .t {
   width: 100%;
@@ -194,35 +182,13 @@ export default {
   flex-direction: column;
   align-content: space-around;
 }
-.div_title4 {
-  width: 80%;
-  height: 10%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  top: -0.8rem;
-  left: 0.7rem;
-  z-index: 6666666666666666666666;
-}
-.div_title4 div {
-  width: 1.3rem;
-  height: 0.43rem;
-  border-radius: 20px;
-  background-color: rgb(253, 218, 175);
-  color: red;
-  text-align: center;
-}
 .div_top3 {
   width: 100%;
   /* justify-self: 1rem; */
   height: 1rem;
   background-color: rgb(247, 242, 242);
 }
-.r_two{
-  font-size: 15px;
-  color: rgb(83, 164, 38);
-}
-.r_one{
+.r_one {
   font-size: 12px;
   color: rgb(140, 140, 140);
 }
@@ -257,16 +223,7 @@ export default {
   width: 100%;
   height: 3rem;
 }
-.box_top {
-  width: 100%;
-  height: 3rem;
-  background-color: rgb(8, 236, 236);
-}
-.van-nav-bar {
-  height: 1.3rem;
-  background-color: rgb(6, 203, 252);
-  color: white;
-}
+
 .img1 {
   width: 0.8rem;
   height: 0.8rem;
@@ -309,11 +266,11 @@ export default {
   line-height: 1.5rem;
 }
 .guan_zhu {
-  background: rgba(235,238,254);
+  background: rgba(235, 238, 254);
   color: rgb(235, 97, 82);
   border: none;
   width: 22.53335vw;
-  height:7.46667vw;
+  height: 8.46667vw;
   font-family: "楷书";
 }
 .span1 {
@@ -327,106 +284,7 @@ export default {
 .van-tab {
   font-size: 15px;
 }
-.age {
-  color: grey;
-  font-size: 0.3rem;
-  margin-left: 0.5rem;
-  margin-top: 0.4rem;
-}
-.s_age {
-  margin-left: 0.5rem;
-}
-.price {
-  color: grey;
-  font-size: 0.3rem;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-.s_price {
-  margin-left: 0.5rem;
-}
-.jian_jie {
-  color: grey;
-  display: flex;
-  justify-content: space-around;
-  width: 90%;
-  font-size: 0.3rem;
-  height: 5rem;
-  /* border: 1px solid #000; */
-  margin-left: 3%;
-  margin-top: 0.5rem;
-  /* margin-left: -0.1rem; */
-}
-.left {
-  width: 28%;
-  height: 100%;
-  /* border: 1px solid #000; */
-  text-align: center;
-}
-.right {
-  width: 80%;
-  line-height: 0.6rem;
-  font-size: 11px;
-}
-.s_jian_jie {
-  margin-left: 0.5rem;
-}
-.main {
-  width: 90%;
-  height: 3.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.048);
-  margin-left: 2%;
-  padding: 0.2rem;
-  margin-top: 0.2rem;
-  /* border: 1px solid #000; */
-}
-.ke_shi {
-  color: rgba(0, 0, 0, 0.805);
-}
-.ming_zi {
-  width: 100%;
-  height: 1rem;
-  /* border: 1px solid #000; */
-  display: flex;
-  align-items: center;
-}
-.ming {
-  margin-left: 0.2rem;
-  color: grey;
-}
-.bao_ming {
-  width: 100%;
-  height: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-.s_bao_ming {
-  color: grey;
-  font-size: 15px;
-}
-.s_mian_fei {
-  color: green;
-  font-size: 17px;
-}
-.asd{
-  width: 100%;
-  height: 60vh;
-  background-color: rgb(240, 242, 245);
-}
-.picture {
-  width: 100%;
-  height: 4rem;
-  
-}
-.picture_wu {
-  width: 50%;
-  height: 90%;
-  margin-left: 25%;
-}
-.zan_wu {
-  text-align: center;
-  color: grey;
-}
+
 .yu_yue {
   width: 100%;
   position: fixed;
@@ -442,9 +300,7 @@ export default {
   bottom: 0rem;
   height: 1rem;
 }
-.ping_jia {
-  position: relative;
-}
+
 .yu_yue3 {
   width: 100%;
   position: fixed;
@@ -462,5 +318,82 @@ export default {
 .contents {
   width: 100%;
   /* overflow: scroll; */
+}
+.div_course {
+  font-size: 0.34rem;
+  width: 70%;
+  margin-left: 0.3rem;
+  margin-top: 0.2rem;
+  color: gray;
+}
+.div_space {
+  width: 94%;
+  margin-left: 0.2rem;
+  border-radius: 0.2rem;
+  height: 2.3rem;
+  /* background-color: green; */
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.div_space2 {
+  width: 40%;
+  height: 100%;
+  /* background-color: hotpink; */
+}
+.div_space2 img {
+  width: 90%;
+  height: 90%;
+  border-radius: 0.2rem;
+}
+.div_space3 {
+  width: 60%;
+  height: 100%;
+  /* background-color: skyblue; */
+}
+.div_spaces2 {
+  width: 100%;
+  height: 50%;
+  /* background-color: violet; */
+  font-size: 0.32rem;
+}
+.div_spaces3 {
+  width: 94%;
+  height: 50%;
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: space-between;
+}
+.div_ttt {
+  position: relative;
+  top: 0.5rem;
+}
+.div_ttt2 {
+  position: relative;
+  top: 0.4rem;
+}
+.divs_space {
+  color: gray;
+}
+.divs2_space {
+  font-size: 0.32rem;
+  color: green;
+}
+.div_xianshi {
+  width: 100%;
+  height: 8rem;
+  text-align: center;
+}
+.div_xianshi img {
+  width: 90%;
+  height: 90%;
+  border-radius: 30px;
+}
+.div_names {
+  position: relative;
+  top: 0.6rem;
+  color: red;
+  font-size: 0.34rem;
+  font-family: "宋体";
 }
 </style>

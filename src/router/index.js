@@ -27,21 +27,21 @@ const routes = [
   //     component: () => import("../views/home/Teacher_Details.vue"),
   //   },
   //明星详情
-  
+
   //   //  课程详情
-    {
-      path: '/cdetail',
-      component: () => import("../views/home/CourseDetails")
-    },
-    {
-      path: '/goyue',
-      component: () => import("../views/home/Bookdetails.vue")
-    },
-    {
-      path: '/courses',
-      name: 'Course',
-      component: () => import('../views/courseDetails/Courses.vue')
-    },
+  {
+    path: '/cdetail',
+    component: () => import("../views/home/CourseDetails")
+  },
+  {
+    path: '/goyue',
+    component: () => import("../views/home/Bookdetails.vue")
+  },
+  {
+    path: '/courses',
+    name: 'Course',
+    component: () => import('../views/courseDetails/Courses.vue')
+  },
 
 
 
@@ -64,6 +64,12 @@ const routes = [
 
 
   },
+  //立即报名跳转的页面
+  {
+    path: '/purchase',
+    name: 'Purchase',
+    component: () => import('../views/course/Purchase'),
+  },
   {
     path: '/CourseDetails',
     name: 'CourseDetails',
@@ -75,17 +81,23 @@ const routes = [
 
   },
 
+  {
+    path: '/learndetails',
+    name: 'Learndetails',
+    component: () => import('../views/course/Learndetails'),
+  },
 
-      {
-        path: '/apply',
-        name: 'Apply',
-        component: () => import('../views/course/Apply.vue')
-      },
-      {
-        path: '/search',
-        name: 'Search',
-        component: () => import('../views/course/Search.vue')
-      },
+
+  {
+    path: '/apply',
+    name: 'Apply',
+    component: () => import('../views/course/Apply.vue')
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: () => import('../views/course/Search.vue')
+  },
 
 
 
@@ -137,11 +149,15 @@ const routes = [
     path: '/My',
     name: 'My',
     component: () => import('../views/my/My'),
+    // beforeEnter: (to, from, next) => {
+    //   var Loginstatus = localStorage.getItem("token")//读取在本地存储的文件
+    //   //判断要是在登录页时就不在判断
+    // },
     meta: {
       showtab: true
     },
 
-   
+
 
   },
 
@@ -165,6 +181,22 @@ const routes = [
     path: '/find',
     name: 'Find',
     component: () => import('../views/my/Find')
+  }, {
+    path: '/sms_login',
+    name: 'Sms_login',
+    component: () => import('../views/my/Sms_login')
+  },
+
+  {
+    path: '/setpassword',
+    name: 'Setpassword',
+    component: () => import('../views/my/Setpassword')
+  },
+
+  {
+    path: '/my_study',
+    name: 'My_study',
+    component: () => import('../components/my/My_study')
   },
 
 
@@ -255,7 +287,7 @@ const routes = [
       showtab: false
     },
   },
- 
+
 
   {
     path: '/Pim',
@@ -294,7 +326,7 @@ const routes = [
 
 
 
-  
+
   // 意见反馈
   {
     path: "/feedback",
@@ -311,6 +343,12 @@ const routes = [
     path: '/Register',
     name: "Register",
     component: () => import("../views/my/Register")
+  },
+
+  {
+    path: '/mm',
+    name: "Mm",
+    component: () => import("../views/my/Mm")
   },
 
 
@@ -385,7 +423,16 @@ const routes = [
   },
 
 
-
+  {
+    path: '/detailsapp',
+    name: 'Detailsapp',
+    component: () => import('../views/home/Detailsapp.vue'),
+  },
+  {
+    path: '/ationdetails',
+    name: 'Ationdetails',
+    component: () => import('../views/home/Ationdetails.vue'),
+  },
 
 ]
 
@@ -394,5 +441,22 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+
+// router.beforeEach((to, from, next) => {
+//   var Loginstatus = localStorage.getItem("token")//读取在本地存储的文件
+//   //判断要是在登录页时就不在判断
+//   if (to.name === 'Register') {
+//     next();//放行
+//   } else {
+//     if (Loginstatus) {
+//       next()
+//     } else {
+//       // next('/Sms_login')
+//       next('/Register')
+//     }
+//   }
+// })
+
 
 export default router
